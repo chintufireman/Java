@@ -1,0 +1,20 @@
+1. in abstract class we can define and declare methods
+
+2. by default we can only have abstract methods (where we cant define methods)
+inside the interfaces but in java 1.8 we can use default keyword
+
+3. be default if u create a variable inside interfaces it get final or constant.
+
+4. Imagine a "A" class and interface "B" which are having show() method and class "C" extends
+"A" and implements "B" then we call show() from "C" then in this case class"A" show() will be called
+ bcoz class have more power compared to interface and normal methods of class will have high 
+ priority compared to default methods of interface. This is also called as "Third Rule".
+ 
+ 5. in default methods of interface we cannot define Object class method like equals,etc.
+ 
+ 6.Market Interface is interface with noting no methods and variables just empty shit,
+ and use of it to create such shit is that suppose u create a class 'Demo' now u create it's
+ object now u want to give some permission like example if 'Demo' class object is created
+ then run it's show() method so to do this we simply implement a marker interface in'Demo'
+ and use it like this if(new Demo()(this is object) instanceOf P(marker interface)) then run show()
+ , instanceOf is keyword we use it to check if instance of Marker is created or not.
