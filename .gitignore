@@ -1,10 +1,7 @@
-MultiThreading/.classpath
-MultiThreading/.project
-MultiThreading/.settings/
-MultiThreading/bin/
+**/.classpath
+**/.project
+**/.settings/
+**/bin/
+**/target/
 
-
-interview/.classpath
-interview/.project
-interview/.settings/
-interview/bin/
+**/workspace/

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	<!-- 1. creating hibernate cfg file by using <hibernate-configuration> tag inside which we have to set
+	session factory attributes using <session-factory>
+		2. after providing every info of database we map the entity with xml file using <mapping> tag inside
+		which we provide class name of Entity we created.
+		3. We have to create entity By using @Entity annotation above class
+	-->
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/myhiber</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+		<!-- dialect means language of database -->
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		
+		
+		<!--  hdm2ddl is used to create tables automatically else type create-->
+		<property name="hbm2ddl.auto">update</property> <!-- create will auto create the table after deleting 
+		old table and create the new one -->
+		
+		
+		<!-- to view all queries hibernate is firing -->
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property><!--to show query properly  -->
+		
+		
+		<property name="cache.use_second_level_cache">true</property>
+		<property name="cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>
+		<!--above two are the configuration for enabling 2nd level cache one more changes are needed
+		to use 2nd level cache, using annotation above entity u have to mention which entity is 
+		going to perform 2nd level cache  -->
+		
+		<!--  to provide the class which is our entity-->
+		<mapping class="com.hibernate.Student" />
+		<mapping class="com.hibernate.Address"/>
+		<mapping class="com.map.Question"/>
+		<mapping class="com.map.Answer"/>
+		<mapping class="com.map.Emp"/>
+		<mapping class="com.map.Product"/>
+		<mapping class="com.map.ListDemo"/>
+		 <!-- if u were doing mapping using hbm file then u would have to 
+		 use <mapping resource  instead of class attribute
+		 -->
+	</session-factory>
+
+</hibernate-configuration>
