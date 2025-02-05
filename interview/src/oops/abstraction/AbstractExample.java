@@ -10,7 +10,6 @@ public class AbstractExample {
 		 */
 		
 		 new Jeep();
-		
 	}
 	static {
 		System.out.println("static block 3");
@@ -43,3 +42,5 @@ abstract class Bike extends Vehicle{
 		System.out.println("Bike");
 	}
 }
+
+
