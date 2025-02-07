@@ -20,7 +20,7 @@ public class ImmutableMapDemo {
 //		this is above one is unmodifiable map but there is one drawback though u cannot
 //		change the new map the above passed map in parameter can be changed
 		
-		Map.of("Akshit",2,"Rahul", 90);
+//		Map.of("Akshit",2,"Rahul", 90); Map.of not working but it gives us immutable map
 		
 	}
 }
