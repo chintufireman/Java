@@ -38,7 +38,7 @@ public class LRUCache<K,V> extends LinkedHashMap<K, V>{
 //		{Mango=3, Orange=3, banana=3}
 //		when u get orange it goes to the bottom of map still as its access order is true
 //		but when u added 4 th element in map with put method it invoked the overrided 
-//		method and removed least recently used or not used which is apple understand 
-//		in depth how it works
+//		method and removed least recently used or not used which is apple
+//		understand in depth how it works
 	}
 }

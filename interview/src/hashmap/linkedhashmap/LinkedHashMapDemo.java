@@ -38,15 +38,18 @@ public class LinkedHashMapDemo {
 //		because if u might want to remove mango first as it is least recently used or not used
 		
 //		suppose u have been told to remove those elements which are least recently used in
-//		programs
-//		map.get("Apple") 
-//		map.get("Orange") 
-//		map.get("Mango")
-//		map.get("Mango")
-//		map.get("Orange")
-//		map.get("Orange")
-//		map.get("Apple")
-//		map.get("Mango")
+////		programs
+//		map.get("Apple");
+//		map.get("Orange"); 
+//		map.get("Mango");
+//		map.get("Mango");
+//		map.get("Orange");
+//		map.get("Orange");
+//		map.get("Apple");
+//		map.get("Mango");
+//		System.out.println(map.toString()); 
+		//{Orange=2, Apple=23, Mango=22}
+
 //		so u dont have to check one by one throughout whole code u can just make access order
 //		true and remove them as u will get at top least recently used
 	

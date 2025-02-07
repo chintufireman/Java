@@ -145,7 +145,6 @@ public class StreamApiQuestions {
 
 	static void filteringExampleInTerminal() {
 //		List<Integer> result = list.stream().collect(Collectors.f) not importing filtering method
-
 	}
 
 	static void collectingAndThenExample() {
