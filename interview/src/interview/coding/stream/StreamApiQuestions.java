@@ -16,6 +16,8 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.ToIntFunction;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 
 public class StreamApiQuestions {
 
@@ -41,6 +43,7 @@ public class StreamApiQuestions {
 		mappingExampleInTerminal();
 		mapToExample();
 		reducingExample();
+		findFactOfNum(5);
 	}
 
 	static void printSumOfAllNumbers() {
@@ -170,5 +173,10 @@ public class StreamApiQuestions {
 	static void reducingExample() {
 		int sum = list.stream().collect(Collectors.reducing(0, Integer::sum));
 		System.out.println("summ of all element is using reducing in terminal " + sum);
+	}
+	
+	static void findFactOfNum(long n) {
+		long reduce = LongStream.rangeClosed(1, n).reduce(1,(a,b)->a*b);
+		System.out.println(reduce);
 	}
 }
