@@ -13,8 +13,8 @@ public class ExecutorFramework2 {
 		ExecutorService executorService = Executors.newFixedThreadPool(9);
 		// whenever u want to create thread pool use above method
 		// if u give 9 as a parameter then every thread will take
-		// 1 number to execute if u have given 3 then every thread
-		// will take 3 number
+		// 1 number or task to execute if u have given 3 then every thread
+		// will take 3 number or task 
 		for (int i = 1; i < 10; i++) {
 			final int finalI = i;
 			Future<?> submit=executorService.submit(() -> {
@@ -38,6 +38,7 @@ public class ExecutorFramework2 {
 
 		try {
 			executorService.awaitTermination(100, TimeUnit.SECONDS);
+			//waits for executor service to complete its job under 100 seconds
 			
 		} catch (InterruptedException exception) {
 

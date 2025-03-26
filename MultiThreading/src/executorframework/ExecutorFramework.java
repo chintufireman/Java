@@ -21,7 +21,7 @@ public class ExecutorFramework {
 			// then wait for each thread using join() method for there completion
 			
 			//previously without multithreading it was taking 9 sec but after using 
-			//threads it takes only 9 thread
+			//threads it takes only 1+ sec thread
 			threads[i-1].start();
 		}
 		for(Thread t : threads) {
