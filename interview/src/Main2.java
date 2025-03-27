@@ -26,7 +26,7 @@ public class Main2 {
 				new Emp(8, "Chutia", "HR", 75000, LocalDate.of(2022, 2, 14));
 
 		//1. Filter Emps who joined before 2020 and have a salary greater than 50,000
-		
+//				Filtering with complex conditions
 //		list.stream()
 //		.filter(e -> e.getSalary() > 50000 
 //				&& e.getJoiningDt().isBefore(LocalDate.of(2020, 1, 1)))
@@ -35,7 +35,7 @@ public class Main2 {
 		
 //		2. Group these employees by their department and calculate the average salary in 
 //		each department.
-		
+//				Grouping and calculating averages
 //		ToDoubleFunction<Emp> toDoubleFunction = (e) -> e.getSalary();
 //		
 //		list
@@ -48,7 +48,7 @@ public class Main2 {
 		
 		
 //		Find the top 3 highest-paid employees sorted by salary in descending order.
-
+//				concept -> Sorting and limiting results
 //		list.stream()
 //		.map(e->e.getSalary())
 //		.sorted(Comparator.reverseOrder())
@@ -57,6 +57,7 @@ public class Main2 {
 		
 //		Create a Map<String, List<Employee>> where the key 
 //		is "Senior" for employees with 5+ years of experience and "Junior" for others.
+//		concept -> Conditional mapping (e.g., "Senior" vs "Junior")
 
 //			Function<Emp, String> function = (e) -> e.getJoiningDt()
 //					.isBefore(LocalDate.now().minusYears(5)) ? "Senior" :"Junior";
@@ -68,24 +69,22 @@ public class Main2 {
 //		.forEach(System.out::println);
 		
 //		Display employees' names who have the second-highest salary in each department
-		
-//		Function<Emp,Double> function = (e) ->
-//			
-		
-		list.stream()
-		.collect(Collectors.groupingBy(e->e.getDept(), Collectors.toList()))
-		.entrySet()
-		.stream()
-		.map(e -> e.getValue()
-				.stream()
-				.map(e1->e1.getSalary())
-				.sorted(Collections.reverseOrder())
-				.skip(1)
-				.limit(1)
-				.findFirst())
-		.collect(Collectors.toList())
-		.stream()
-		.forEach(e->System.out.println(e.get()));;
+//		concept -> Finding the second-highest element in groups
+				
+//		list.stream()
+//		.collect(Collectors.groupingBy(e->e.getDept(), Collectors.toList()))
+//		.entrySet()
+//		.stream()
+//		.map(e -> e.getValue()
+//				.stream()
+//				.map(e1->e1.getSalary())
+//				.sorted(Collections.reverseOrder())
+//				.skip(1)
+//				.limit(1)
+//				.findFirst())
+//		.collect(Collectors.toList())
+//		.stream()
+//		.forEach(e->System.out.println(e.get()));;
 		
 	}
 }
